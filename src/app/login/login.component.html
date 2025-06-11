@@ -3,16 +3,22 @@
     <img src="abakada_logo.png" alt="Logo" class="logo" />
     <form>
       <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="text" id="username" placeholder="Enter Username" required />
 
       <label for="password">Password</label>
-      <input type="text" id="password" placeholder="Enter Password" required>
+      <input type="text" id="password" placeholder="Enter Password" required />
 
-      <button type="submit" class="login-button">Login</button>
+      <button type="submit" class="login-button" routerLink="/dashboard" routerLinkActive="activate">
+       Login</button>
 
       <div class="links">
-        <a routerLink="/register" routerLinkActive="activate">Don't Have an Account?"</a>
-        <a routerLink="/forget-password" routerLinkActive="activate">Forget Password?</a>
+        <a routerLink="/register" routerLinkActive="activate"
+          >Don't Have an Account?"</a
+        >
+        <a routerLink="/forgot-password" routerLinkActive="activate"
+          >Forget Password?</a 
+        >
+        <i class="fas fa-check-circle" style="font-size: 24px; color: red;"></i>
       </div>
     </form>
   </div>
