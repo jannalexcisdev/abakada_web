@@ -1,0 +1,43 @@
+<div class="main-layout">
+    <app-navigation></app-navigation>
+    <div class="main-container">
+<app-header></app-header>
+
+
+<div class="form-container">
+    <h2>Cash Out Encoding</h2>
+    <form>
+      <div class="row">
+        <div>
+          <label for="voucher">Voucher Control No.</label>
+          <input type="text" id="voucher" name="voucher" placeholder="Enter Control No.">
+        </div>
+        <div>
+          <label for="date">Date of Cash Out*</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+      </div>
+
+      <label for="purpose">Purpose/Description*</label>
+      <select id="purpose" name="purpose" required>
+        <option value="">Choose</option>
+        <option value="supplies">Supplies</option>
+        <option value="travel">Travel</option>
+        <option value="maintenance">Maintenance</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="amount">Amount of Cash Out*</label>
+      <input type="text" id="amount" name="amount" placeholder="Enter Amount in Php" required>
+
+      <label for="proof">Proof/Documentation*</label>
+      <input type="file" id="proof" name="proof" required>
+
+      <label for="remarks">Remarks</label>
+      <textarea id="remarks" name="remarks" placeholder="Optional"></textarea>
+
+      <button type="submit" class="submit-btn">SUBMIT</button>
+    </form>
+  </div>
+      </div>
+</div>
