@@ -1,27 +1,31 @@
-  <div class="container">
-    <div class="signup-box">
-      <img src="abakada_logo.png" alt="Logo" class="logo" />
-      <form>
-        <label>First Name</label>
-        <input type="text" placeholder="Enter first name" required />
-        
-        <label>Last Name</label>
-        <input type="text" placeholder="Enter last name" required />
-        
-        <label>Username</label>
-        <input type="text" placeholder="Enter username" required />
-        
-        <label>Email</label>
-        <input type="email" placeholder="Enter email" required />
-        
-        <label>Password</label>
-        <input type="password" placeholder="Enter password" required />
-        
-        <label>Re-type password</label>
-        <input type="password" placeholder="Enter password" required />
-        
-        <button type="submit">REGISTER</button>
-      </form>
-      <a class="login-link" routerLink="" routerLinkActive="active">Login to your account</a>
-    </div>
+<div class="container">
+  <div class="signup-box">
+    <img src="abakada_logo.png" alt="Logo" class="logo" />
+    <form (ngSubmit)="register()" #registerForm="ngForm">
+      <label>First Name</label>
+      <input type="text" name="firstName" id="firstName" [(ngModel)]="userModel.firstName" placeholder="Enter first name" required />
+
+      <label>Last Name</label>
+      <input type="text" name="lastName" id="lastName" [(ngModel)]="userModel.lastName" placeholder="Enter last name" required />
+
+      <label>Username</label>
+      <input type="text" name="username" id="username" [(ngModel)]="userModel.username" placeholder="Enter username" required />
+
+      <label>Email</label>
+      <input type="email" name="email" id="email" [(ngModel)]="userModel.email" placeholder="Enter email" required />
+
+      <label>Password</label>
+      <input type="password" name="password" id="password" [(ngModel)]="userModel.password" placeholder="Enter password" required />
+
+      <label>Re-type password</label>
+      <input type="password" placeholder="Enter password" required />
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+      <button type="submit">REGISTER</button>
+    </form>
+    <a class="login-link" routerLink="" routerLinkActive="active"
+      >Login to your account</a
+    >
   </div>
+</div>
