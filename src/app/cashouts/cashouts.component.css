@@ -1,0 +1,123 @@
+  .main-layout {
+  display: flex;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.dashboard-container {
+  flex-grow: 1;
+  background-color: #f8f9fb;
+  /* padding: 2vh 2vw; */
+  overflow-y: auto;
+}
+
+  
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .filter-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 200px;
+      min-width: 180px;
+    }
+
+    .filter-group label {
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+
+    .filter-group input,
+    .filter-group select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .view-all {
+      background-color: #e0e0e0;
+    }
+
+    .search {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .table-wrapper {
+      margin-top: 20px;
+      background-color: #fff;
+      overflow-x: auto;
+    }
+
+    .table-header {
+      margin-bottom: 10px;
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1000px; /* ensures scroll on smaller screens */
+    }
+
+    table thead {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #e7f4e4;
+    }
+
+    table tbody tr:nth-child(odd) {
+      background-color: #c8e6c9;
+    }
+
+    /* Optional: Responsive tweaks */
+    @media (max-width: 768px) {
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
