@@ -1,0 +1,91 @@
+<div class="main-layout">
+  <app-navigation></app-navigation>
+
+  <div class="dashboard-container">
+    <app-header></app-header>
+
+    <div class="container">
+      <h2>Loan Profile</h2>
+
+      <div class="filter-section">
+        <div class="filter-group">
+          <label for="fiscalYear">FY</label>
+          <input type="text" id="fiscalYear" placeholder="Enter Fiscal Year" />
+        </div>
+
+        <div class="filter-group">
+          <label for="controlNo">Loan Control No.</label>
+          <input type="text" id="controlNo" placeholder="Enter Control No." />
+        </div>
+
+        <div class="filter-group">
+          <label for="debtorName">Name of Debtor</label>
+          <input type="text" id="debtorName" placeholder="Enter Debtor name" />
+        </div>
+
+        <div class="filter-group">
+          <label for="dueDate">Due Date</label>
+          <input type="date" id="dueDate" />
+        </div>
+
+        <div class="filter-group">
+          <label for="loanType">Loan Type</label>
+          <select id="loanType">
+            <option>Choose Loan Type</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="loanStatus">Loan Status</label>
+          <select id="loanStatus">
+            <option>Choose status</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="transDate">Transaction Date</label>
+          <input type="date" id="transDate" />
+        </div>
+
+        <div class="buttons">
+          <button class="view-all">View All</button>
+          <button class="search">Search</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <div class="table-header">
+          <button>FY 2025</button>
+          <span>Last modified by:</span>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Control No</th>
+              <th>Name of Debtor</th>
+              <th>Name of Co-borrower</th>
+              <th>Name of Guarantor</th>
+              <th>Loan Amount</th>
+              <th>Interest Rate</th>
+              <th>Duration</th>
+              <th>Service Charge</th>
+              <th>Date of Loan</th>
+              <th>Encoder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>25-001</td>
+              <td colspan="9"></td>
+            </tr>
+            <tr>
+              <td>25-003</td>
+              <td colspan="9"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
