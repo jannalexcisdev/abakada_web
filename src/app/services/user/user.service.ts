@@ -21,8 +21,12 @@ export class UserService {
     return this.http.post<UserModel>(`${BASE_URL}/user/login`, {username, password})
   }
 
+  getUsers():Observable<any> {
+    return this.http.get(`${BASE_URL}/user`)
+  }
+
   updateUser(id: number, userModel: UserModel): Observable<UserModel> {
-    return this.http.patch<UserModel>(`$P{BASE_URL}/user/${id}`, userModel)
+    return this.http.patch<UserModel>(`${BASE_URL}/user/${id}`, userModel)
   }
 
   deleteUser(id:number): Observable<UserModel> {
