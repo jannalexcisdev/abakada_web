@@ -1,0 +1,72 @@
+<div class="main-layout">
+  <app-navigation></app-navigation>
+
+  <div class="dashboard-container">
+    <app-header></app-header>
+
+    <div class="container">
+      <h2>Receipt Database</h2>
+
+      <div class="filter-section">
+        <div class="filter-group">
+          <label for="fiscalYear">FY</label>
+          <input type="text" id="fiscalYear" placeholder="Enter Fiscal Year" />
+        </div>
+
+        <div class="filter-group">
+          <label for="controlNo">Loan Control No.</label>
+          <input type="text" id="controlNo" placeholder="Enter Control No." />
+        </div>
+
+        <div class="filter-group">
+          <label for="debtorName">Receipt No.</label>
+          <input type="text" id="receiptNo" placeholder="Enter Receipt No." />
+        </div>
+
+        <div class="filter-group">
+          <label for="DateofPayment">Date of Payment</label>
+          <input type="date" id="DateofPayment" />
+        </div>
+
+
+        <div class="buttons">
+          <button class="view-all">View All</button>
+          <button class="search">Search</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <div class="table-header">
+          <!-- <button>FY 2025</button> -->
+          <span>Last modified by:</span>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Receipt No.</th>
+              <th>Booklet No.</th>
+              <th>Date of Payment</th>
+              <th>Loan Control  No. </th>
+              <th>Amount Tendered</th>
+              <th>Payment Term</th>
+              <th>Name of Debtor</th>
+              <th>Balance</th>
+              <th>Encoder</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>25-001</td>
+              <td colspan="9"></td>
+            </tr>
+            <tr>
+              <td>25-003</td>
+              <td colspan="9"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
