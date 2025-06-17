@@ -1,112 +1,121 @@
-  <div class="main-layout">
-    <app-navigation></app-navigation>
-    <div class="main-container">
+<div class="main-layout">
+  <app-navigation></app-navigation>
+  <div class="main-container">
     <app-header></app-header>
 
-  
-  <div class="form-container">
-    <h1>Loan Encoding</h1>
+    <div class="form-container">
+      <h1>Loan Encoding</h1>
 
-    <!-- Loan Control No. -->
-    <div class="form-group">
-      <label>Loan Control No.</label>
-      <input type="text" placeholder="Enter Loan Control No.">
-    </div>
+      <!-- Loan Control No. -->
+      <div class="form-group">
+        <label>Loan Control No.</label>
+        <input type="text" placeholder="Enter Loan Control No." />
+      </div>
 
-    <!-- Name of Debtor -->
-    <div class="form-row">
-      <label>Name of Debtor*</label>
-      <div class="form-inline">
-        <input type="text" placeholder="Enter Client ID">
-        <input type="text" value="Juan Dela Cruz" disabled>
-        <input type="text" value="delacruzjuan@gmail.com" disabled>
-      </div>
-    </div>
-
-    <!-- Name of Coborrower -->
-    <div class="form-row">
-      <label>Name of Coborrower (if any)</label>
-      <div class="form-inline">
-        <input type="text" placeholder="Enter Client ID">
-        <input type="text" value="Juan Dela Cruz" disabled>
-        <input type="text" value="delacruzjuan@gmail.com" disabled>
-      </div>
-    </div>
-
-    <!-- Name of Guarantor -->
-    <div class="form-row">
-      <label>Name of Guarantor (if any)</label>
-      <div class="form-inline">
-        <input type="text" placeholder="Enter Client ID">
-        <input type="text" value="Juan Dela Cruz" disabled>
-        <input type="text" value="delacruzjuan@gmail.com" disabled>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- Grid section -->
-    <div class="grid-3">
-      <div class="form-group">
-        <label>Loan Amount (PhP)</label>
-        <input type="text" placeholder="Enter Loan Amount ( > Php 1000.00 )">
-      </div>
-      <div class="form-group">
-        <label>Type of Loan</label>
-        <select><option>Choose</option></select>
-      </div>
-      <div class="form-group">
-        <label>Duration (Months)</label>
-        <select><option>Choose</option></select>
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="form-group">
-        <label>Date of Loan</label>
-        <input type="date">
-      </div>
-      <div class="form-group">
-        <label>Service Charge (Php)</label>
-        <input type="text" placeholder="Enter Amount">
-      </div>
-      <div class="form-group">
-        <label>Collateral Requirement</label>
-        <select><option>Choose</option></select>
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="form-group">
-        <label>Loan Interest Rate (%)</label>
-        <input type="text">
-      </div>
-      <div class="form-group">
-        <label>Final Due Date</label>
-        <input type="date">
-      </div>
-      <div class="form-group">
-        <label>Computed Interest</label>
-        <input type="text">
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="form-group">
-        <label>No. of Terms</label>
-        <input type="text">
-      </div>
-      <div class="form-group">
-        <label>Amount to be Received</label>
-        <input type="text">
-      </div>
-      <div class="form-group">
-        <label>Amount Payable per due date</label>
-        <input type="text">
-      </div>
-    </div>
-
-    <button class="submit-btn">SUBMIT</button>
+<div class="form-row">
+  <label>Name of Debtor*</label>
+  <div class="form-inline">
+    <input type="text" placeholder="Enter Client ID"
+           (input)="onSearchInput(($event.target as HTMLInputElement).value)">
+    <input type="text" [value]="user?.firstName" disabled>
+    <input type="text" [value]="user?.lastName" disabled>
   </div>
 </div>
+
+
+      <!-- Name of Coborrower -->
+      <div class="form-row">
+        <label>Name of Coborrower (if any)</label>
+        <div class="form-inline">
+          <input type="text" placeholder="Enter Client ID" />
+          <input type="text" value="Juan Dela Cruz" disabled />
+          <input type="text" value="delacruzjuan@gmail.com" disabled />
+        </div>
+      </div>
+
+      <!-- Name of Guarantor -->
+      <div class="form-row">
+        <label>Name of Guarantor (if any)</label>
+        <div class="form-inline">
+          <input type="text" placeholder="Enter Client ID" />
+          <input type="text" value="Juan Dela Cruz" disabled />
+          <input type="text" value="delacruzjuan@gmail.com" disabled />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Grid section -->
+      <div class="grid-3">
+        <div class="form-group">
+          <label>Loan Amount (PhP)</label>
+          <input
+            type="text"
+            placeholder="Enter Loan Amount ( > Php 1000.00 )"
+          />
+        </div>
+        <div class="form-group">
+          <label>Type of Loan</label>
+          <select>
+            <option>Choose</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Duration (Months)</label>
+          <select>
+            <option>Choose</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="form-group">
+          <label>Date of Loan</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Service Charge (Php)</label>
+          <input type="text" placeholder="Enter Amount" />
+        </div>
+        <div class="form-group">
+          <label>Collateral Requirement</label>
+          <select>
+            <option>Choose</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="form-group">
+          <label>Loan Interest Rate (%)</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label>Final Due Date</label>
+          <input type="date" />
+        </div>
+        <div class="form-group">
+          <label>Computed Interest</label>
+          <input type="text" />
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="form-group">
+          <label>No. of Terms</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label>Amount to be Received</label>
+          <input type="text" />
+        </div>
+        <div class="form-group">
+          <label>Amount Payable per due date</label>
+          <input type="text" />
+        </div>
+      </div>
+
+      <button class="submit-btn">SUBMIT</button>
+    </div>
+  </div>
 </div>
