@@ -1,0 +1,55 @@
+<div class="main-layout">
+  <app-navigation></app-navigation>
+
+  <div class="dashboard-container">
+    <app-header></app-header>
+
+    <div class="container">
+      <h2>Master List</h2>
+      <div class="tabs">
+        <div class="tab active" onclick="showTab('members')">Members</div>
+        <div class="tab" onclick="showTab('external')">External Clients</div>
+      </div>
+
+      <div class="tab-content">
+        <div class="members-content" id="membersTab">
+          <div class="header-bar">
+            <div></div>
+            <div>
+              <span>Edit</span> &nbsp;
+              <span>Add</span>
+            </div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Member ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>User Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstName }}</td>
+                <td>{{ user.lastName }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.password }}</td>
+                <td>{{ user.user_type }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="external-content" id="externalTab">
+          <!-- External Clients content will be added here later -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
