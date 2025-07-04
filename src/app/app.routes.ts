@@ -7,6 +7,11 @@ import { LoanEncodingComponent } from './loan-encoding/loan-encoding.component';
 import { ReceiptEncodingComponent } from './receipt-encoding/receipt-encoding.component';
 import { SettlePaymentComponent } from './settle-payment/settle-payment.component';
 import { CashoutEncodingComponent } from './cashout-encoding/cashout-encoding.component';
+import { LoanProfileComponent } from './loan-profile/loan-profile.component';
+import { ReceiptDatabaseComponent } from './receipt-database/receipt-database.component';
+import { CashoutsComponent } from './cashouts/cashouts.component';
+import { AbakadaAuditingComponent } from './abakada-auditing/abakada-auditing.component';
+import { MasterListComponent } from './master-list/master-list.component';
 
 export const routes: Routes = [
     {
@@ -40,5 +45,25 @@ export const routes: Routes = [
     {
         path:'cashout-encoding',
         component:CashoutEncodingComponent,
+    },
+    {
+        path:'loan-profile',
+        component:LoanProfileComponent,
+    },
+    {
+        path:'receipt-database',
+        component:ReceiptDatabaseComponent,
+    },
+    {
+        path:'cashouts',
+        component:CashoutsComponent,
+    },
+    {
+        path:'abakada-auditing',
+        component:AbakadaAuditingComponent,
+    },
+    {
+        path:'master-list',
+        component: MasterListComponent
     }
 ];
