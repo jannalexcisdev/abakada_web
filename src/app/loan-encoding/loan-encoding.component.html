@@ -12,34 +12,57 @@
         <input type="text" placeholder="Enter Loan Control No." />
       </div>
 
+      <!-- Name of Debtor -->
+      <!-- <div class="form-row">
+        <label>Name of Debtor</label>
+        <div class="form-inline">
+          <input type="text" placeholder="Enter Client ID" />
+          <input type="text" id="clientName" value="Juan Dela Cruz" disabled />
+          <input type="text" id="clientEmail" value="delacruzjuan@gmail.com" disabled />
+        </div>
+      </div> -->
+
+
+
+
 <div class="form-row">
-  <label>Name of Debtor*</label>
+  <label>Name of Debtor</label>
   <div class="form-inline">
-    <input type="text" placeholder="Enter Client ID"
-           (input)="onSearchInput(($event.target as HTMLInputElement).value)">
-    <input type="text" [value]="user?.firstName" disabled>
-    <input type="text" [value]="user?.lastName" disabled>
+    <input type="text" placeholder="Enter Client ID" [formControl]="debtorIdControl" />
+    <input type="text" id="clientName" [value]="debtorName" disabled />
+    <input type="text" id="clientEmail" [value]="debtorEmail" disabled />
   </div>
 </div>
 
 
+
+<div class="form-row">
+  <label> Name of Coborrower (if any)</label>
+  <div class="form-inline">
+    <input type="text" placeholder="Enter Client ID" [formControl]="coborrowerIdControl" />
+    <input type="text" value="Juan Dela Cruz" disabled  [value]="coborrowerName"/>
+          <input type="text" value="delacruzjuan@gmail.com" disabled [value]="coborrowerEmail"/>
+  </div>
+</div>
+      
+
       <!-- Name of Coborrower -->
-      <div class="form-row">
+      <!-- <div class="form-row">
         <label>Name of Coborrower (if any)</label>
         <div class="form-inline">
           <input type="text" placeholder="Enter Client ID" />
           <input type="text" value="Juan Dela Cruz" disabled />
           <input type="text" value="delacruzjuan@gmail.com" disabled />
         </div>
-      </div>
+      </div> -->
 
       <!-- Name of Guarantor -->
       <div class="form-row">
         <label>Name of Guarantor (if any)</label>
         <div class="form-inline">
-          <input type="text" placeholder="Enter Client ID" />
-          <input type="text" value="Juan Dela Cruz" disabled />
-          <input type="text" value="delacruzjuan@gmail.com" disabled />
+          <input type="text" placeholder="Enter Client ID" [formControl]="guarantorIdControl" />
+          <input type="text" value="Juan Dela Cruz" disabled [value]="guarantorName"/>
+          <input type="text" value="Juan Dela Cruz" disabled [value]="guarantorEmail"/>
         </div>
       </div>
 
