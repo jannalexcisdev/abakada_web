@@ -32,4 +32,8 @@ export class UserService {
   deleteUser(id:number): Observable<UserModel> {
     return this.http.delete<UserModel>(`${BASE_URL}/user/${id}`)
   }
+
+  getUser(id:number): Observable<UserModel> {
+    return this.http.get<UserModel>(`${BASE_URL}/user/${id}`)
+  }
 }
