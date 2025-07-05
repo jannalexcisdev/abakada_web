@@ -10,15 +10,15 @@
     <div class="form-row">
       <div class="form-column">
         <label>Loan Control No.*</label>
-        <input type="text" placeholder="Enter Loan Control No.">
+        <input type="text" placeholder="Enter Loan Control No." [formControl]="loanControlNo">
       </div>
       <div class="form-column balance-box">
         <!-- <label class="balance-label">Balance</label> -->
-        <input type="text" value="Juan De La Cruz" readonly>
+        <input type="text" value="Juan De La Cruz" readonly [value]="loanName">
       </div>
       <div class="form-column">
                 <label class="balance-label">Balance</label>
-        <input type="text" value="4,000.00" readonly>
+        <input type="text" value="4,000.00" readonly [value]="loanBalance">
       </div>
     </div>
 
@@ -26,11 +26,11 @@
     <div class="form-row">
       <div class="form-column">
         <label>Receipt No.</label>
-        <input type="text" placeholder="Enter Receipt No.">
+        <input type="text" placeholder="Enter Receipt No." [formControl]="receiptNo">
       </div>
       <div class="form-column balance-box">
         <!-- <label class="balance-label">Balance</label> -->
-        <input type="text" value="Bklt 46" readonly>
+        <input type="text" value="Bklt 46" readonly [value]="receipt"/>
       </div>
     </div>
 
